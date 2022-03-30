@@ -1,4 +1,4 @@
-package com.example.demo.common;
+package com.example.demo.jwt.common;
 
 public enum ERole {
     ROLE_USER,
