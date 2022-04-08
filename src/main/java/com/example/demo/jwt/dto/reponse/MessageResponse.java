@@ -2,7 +2,7 @@ package com.example.demo.jwt.dto.reponse;
 
 import lombok.Data;
 
-
+@Data
 public class MessageResponse {
     private String message;
 
@@ -12,6 +12,5 @@ public class MessageResponse {
     public MessageResponse(String message) {
         this.message = message;
     }
-
 
 }

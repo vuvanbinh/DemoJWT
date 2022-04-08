@@ -12,6 +12,7 @@ import com.example.demo.jwt.repositories.RoleRepository;
 import com.example.demo.jwt.repositories.UserRepository;
 import com.example.demo.jwt.services.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -25,6 +26,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -43,6 +45,7 @@ public class AuthController {
     PasswordEncoder encoder;
 
     @Autowired
+    @Qualifier("jwtUtils")
     JwtUtils jwtUtils;
 
     @PostMapping("/signin")
